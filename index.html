@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+    />
+    <link
+      rel="icon"
+      href="https://cdn.discordapp.com/emojis/835942031485304873.png"
+      type="image/x-icon"
+    />
+    <script type="module" defer src="app.js"></script>
+    <title>VS Material calculator</title>
+  </head>
+
+  <body>
+    <h1 class="text-center under-line">Violent Sun Material calculator</h1>
+    <br />
+    <div class="total-calc">
+      <div class="container-fluid total">
+        <form action="">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th></th>
+                <th>St. Wep</th>
+                <th>St. Gear</th>
+                <th>Ex. Wep</th>
+                <th>Ex.II Gear</th>
+                <th>HR Wep/Gear</th>
+                <th>Accessory</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="bold">Enter Amount to craft</td>
+                <td><input type="number" id="StWepValue" value="0" /></td>
+                <td><input type="number" id="StGearValue" value="0" /></td>
+                <td><input type="number" id="ExWepValue" value="0" /></td>
+                <td><input type="number" id="ExGearValue" value="0" /></td>
+                <td><input type="number" id="HRItemValue" value="0" /></td>
+                <td><input type="number" id="AccValue" value="0" /></td>
+              </tr>
+            </tbody>
+          </table>
+          <button class="btn btn-success btn-lg" id="calculate" type="submit">
+            Calculate
+          </button>
+        </form>
+        <br />
+        <table class="table table-hover table-bordered">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Pale fragment</th>
+              <th>Burning Amber</th>
+              <th>Molten Shard</th>
+              <th>BP(Curing Catalyst)</th>
+              <th>Zenny(Million)</th>
+              <th>Crafting desire crystal (Million)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="bold">Total</td>
+              <td id="paleFragOutput">0</td>
+              <td id="burningAmbOutput">0</td>
+              <td id="moltenShardOutput">0</td>
+              <td id="BPOutput">0</td>
+              <td id="ZnOutput">0</td>
+              <td id="craftZnOutput">0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="info-container container-fluid">
+      <hr />
+      <h3 class="text-left under-line">Values used in calculations</h3>
+      <div class="container-fluid info1">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Burning Amber</th>
+              <th>Molten Shard</th>
+              <th>Zenny(Million)</th>
+              <th>Crafting desire crystal (Million)</th>
+            </tr>
+          </thead>
+          <tfoot></tfoot>
+          <tbody>
+            <tr>
+              <td>St. Wep</td>
+              <td>175</td>
+              <td>6 crystal*10= 60</td>
+              <td>3.2m</td>
+              <td>2.7m</td>
+            </tr>
+            <tr>
+              <td>St. Gear</td>
+              <td>70</td>
+              <td>4 crystals*10= 40</td>
+              <td>3.2m</td>
+              <td>1.8m</td>
+            </tr>
+            <tr>
+              <td>Ex. Wep</td>
+              <td>455</td>
+              <td>45 crystal*10= 450</td>
+              <td>6.4m</td>
+              <td>20.25m</td>
+            </tr>
+            <tr>
+              <td>Ex.II Gear</td>
+              <td>230</td>
+              <td>20 crystal*10= 200</td>
+              <td>6.4m</td>
+              <td>9m</td>
+            </tr>
+            <tr>
+              <td>Accessory</td>
+              <td>265</td>
+              <td>26 crystal*10= 260</td>
+              <td>4.48m</td>
+              <td>11.7m</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="container-fluid info2">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Pale Amber</th>
+              <th>Zenny(Million)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HR Gear/Wep</td>
+              <td>2</td>
+              <td>9m</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="bold">
+          *better NOT farm the weapon and get it from 300 run achivement
+        </p>
+      </div>
+      <div class="container-fluid info3">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Pale fragment</th>
+              <th>Burning Amber</th>
+              <th>Molten Shard</th>
+              <th>BP(Curing Catalyst)</th>
+              <th>Zenny(Million)</th>
+              <th>Crafting desire crystal (Million)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1xPale Amber</td>
+              <td>60</td>
+              <td>1100</td>
+              <td>30 crystal*10= 300</td>
+              <td>15 curing catalyst*10k BP= 150,000</td>
+              <td>5m</td>
+              <td>13.5m</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="notes container-fluid">
+      <hr />
+      <h3 class="under-line">Notes</h3>
+      <ul>
+        <li>
+          Items doesn’t need "Molten Shards" directly, it need crystal of desire
+          which costs 10 molten shards and 450k zenny; which is refered to as
+          (Crafting desire crystal)
+        </li>
+        <li>Curing catalyst is bought with BP 1=10k</li>
+        <li>
+          better NOT farm the HR weapon and get it from 300 run achivement
+        </li>
+        <li>
+          Burning amber drops in all phases or from dismantling St/Ex gear
+        </li>
+        <li>Pale fragment drops in Ph3 only or from dismantling HR items</li>
+        <li>Ph1 drops St. / Ph2 drops St.&Ex. /Ph3 drops Ex.&HR</li>
+        <li>Acc may drop in all phases</li>
+      </ul>
+    </div>
+    <div class="shout-out container-fluid">
+      <hr />
+      <h3 class="under-line">Original info</h3>
+      <p>
+        *I used the screenshots to make the calculator, Since there is small
+        difference between the two msgs but I think the difference is from
+        "Janice" VIP lvl or KR/JP servers diff
+      </p>
+      <h4>
+        from discord:Shion#5251
+        <a
+          href="https://discord.com/channels/570249569133395971/584962531467198484/854660791545626655"
+          >Screenshots</a
+        >
+      </h4>
+      <h4>
+        from discord:Simon99#0305
+        <a
+          href="https://discord.com/channels/570249569133395971/584962531467198484/854385742536900640"
+          >Written Msg</a
+        >
+      </h4>
+    </div>
+    <div class="my-info container-fluid">
+      <h3 class="under-line">Bugs/problems</h3>
+      Have u found any bugs or problems ? find me on discord user:Musho-
+      (•̀ᴗ•́)ง#7885 or <a href="https://github.com/Mush-0">github</a>
+    </div>
+  </body>
+</html>
