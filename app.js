@@ -48,7 +48,8 @@ form.addEventListener("submit", (e) => {
   document.getElementById("burningAmbOutput").textContent = result.amber;
   document.getElementById("moltenShardOutput").textContent = result.molten;
   document.getElementById("BPOutput").textContent = addComma(result.bp);
-  document.getElementById("ZnOutput").textContent = result.zenny + "m";
+  document.getElementById("ZnOutput").textContent =
+    result.zenny.toString().slice(0, 5) + "m";
   document.getElementById("craftZnOutput").textContent =
-    result.craftZenny + "m";
+    result.craftZenny.toString().slice(0, 5) + "m";
 });
