@@ -20,12 +20,20 @@ body {
 /* Layout rules */
 /* ************ */
 
+.d-flex {
+  display: -ms-flexbox;
+  display: flex;
+}
+.justify-content-center {
+  -ms-flex-pack: center;
+  justify-content: center;
+}
 button {
   font-size: 1.6rem !important;
   font-weight: bold !important;
-  margin-left: 35% !important;
+  margin-left: 2rem !important;
   padding: 1rem;
-  width: 30%;
+  width: 20%;
 }
 th,
 td {

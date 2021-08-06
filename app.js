@@ -5,17 +5,30 @@ import { addComma } from "./addComma.js";
  * Retrieve data from DOM, Handle it, show it on DOM
  */
 const form = document.getElementsByTagName("form")[0];
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+
+form.addEventListener("submit", calcAndUpdate);
+document.getElementById("resetBtn").addEventListener("click", calcAndUpdate);
+
+function calcAndUpdate(e) {
+  // Check if event fired is submit or reset
+  e.target.type === "reset" || e.preventDefault();
   /**
    * 1. Data retrieved
    */
-  const stWepValue = document.getElementById("StWepValue").value;
-  const stGearValue = document.getElementById("StGearValue").value;
-  const exWepValue = document.getElementById("ExWepValue").value;
-  const exGearValue = document.getElementById("ExGearValue").value;
-  const hrItemValue = document.getElementById("HRItemValue").value;
-  const accValue = document.getElementById("AccValue").value;
+  let stWepValue = document.getElementById("StWepValue").value;
+  let stGearValue = document.getElementById("StGearValue").value;
+  let exWepValue = document.getElementById("ExWepValue").value;
+  let exGearValue = document.getElementById("ExGearValue").value;
+  let hrItemValue = document.getElementById("HRItemValue").value;
+  let accValue = document.getElementById("AccValue").value;
+  // Change values to 0 if resetBtn was clicked
+  e.target.type === "reset" &&
+    ((stWepValue = 0),
+    (stGearValue = 0),
+    (exWepValue = 0),
+    (exGearValue = 0),
+    (hrItemValue = 0),
+    (accValue = 0));
   /**
    * 2. Data handled
    */
@@ -52,4 +65,4 @@ form.addEventListener("submit", (e) => {
     result.zenny.toString().slice(0, 5) + "m";
   document.getElementById("craftZnOutput").textContent =
     result.craftZenny.toString().slice(0, 5) + "m";
-});
+}
