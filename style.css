@@ -35,6 +35,7 @@ td {
 .info2,
 .info1,
 .info3,
+.info4,
 .total {
   width: max-content;
 }
@@ -49,13 +50,6 @@ td {
 /* Coloring the materials */
 /* ********************** */
 
-/* Burning Amber */
-.info1 td:nth-child(2),
-.info1 th:nth-child(2),
-.info3 td:nth-child(3),
-.info3 th:nth-child(3) {
-  background-color: rgba(252, 190, 76, 0.7);
-}
 /* Pale Amber */
 .info2 td:nth-child(2),
 .info2 th:nth-child(2) {
@@ -66,11 +60,23 @@ td {
 .info3 th:nth-child(2) {
   background-color: rgba(195, 73, 252, 0.7);
 }
+/* Burning Amber */
+.info1 td:nth-child(2),
+.info1 th:nth-child(2),
+.info3 td:nth-child(3),
+.info3 th:nth-child(3),
+.info4 td:nth-child(2),
+.info4 th:nth-child(2) {
+  background-color: rgba(252, 190, 76, 0.7);
+}
+
 /* Molten Shard */
 .info1 td:nth-child(3),
 .info1 th:nth-child(3),
 .info3 td:nth-child(4),
-.info3 th:nth-child(4) {
+.info3 th:nth-child(4),
+.info4 td:nth-child(3),
+.info4 th:nth-child(3) {
   background-color: rgba(219, 140, 255, 0.7);
 }
 /* Curing Catalyst */
