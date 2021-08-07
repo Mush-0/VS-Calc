@@ -15,12 +15,12 @@ function calcAndUpdate(e) {
   /**
    * 1. Data retrieved
    */
-  let stWepValue = document.getElementById("StWepValue").value;
-  let stGearValue = document.getElementById("StGearValue").value;
-  let exWepValue = document.getElementById("ExWepValue").value;
-  let exGearValue = document.getElementById("ExGearValue").value;
-  let hrItemValue = document.getElementById("HRItemValue").value;
-  let accValue = document.getElementById("AccValue").value;
+  let stWepValue = document.getElementById("StWepValue").value || 0;
+  let stGearValue = document.getElementById("StGearValue").value || 0;
+  let exWepValue = document.getElementById("ExWepValue").value || 0;
+  let exGearValue = document.getElementById("ExGearValue").value || 0;
+  let hrItemValue = document.getElementById("HRItemValue").value || 0;
+  let accValue = document.getElementById("AccValue").value || 0;
   // Change values to 0 if resetBtn was clicked
   e.target.type === "reset" &&
     ((stWepValue = 0),
