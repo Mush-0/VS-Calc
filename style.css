@@ -9,7 +9,6 @@ body {
 /* ***************** */
 /* Typeography rules */
 /* ***************** */
-
 .under-line {
   text-decoration: underline;
 }
@@ -23,6 +22,12 @@ body {
 .d-flex {
   display: -ms-flexbox;
   display: flex;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .justify-content-center {
   -ms-flex-pack: center;
@@ -107,4 +112,69 @@ td {
 .info3 td:nth-child(7),
 .info3 th:nth-child(7) {
   background-color: rgba(255, 246, 119, 0.7);
+}
+
+/* ***************** */
+/* Dark Mode toggler */
+/* ***************** */
+.dark-mode {
+  background-color: #242424;
+  color: whitesmoke;
+}
+.dark-mode .table-hover > tbody > tr:hover {
+  background-color: #6d5a5f !important;
+}
+input {
+  color: black !important;
+}
+.info-container td:not(:nth-child(1)),
+.valuable-info td:not(:nth-child(1)),
+.info-container th,
+.valuable-info th {
+  color: black;
+}
+
+/* checkbox rules */
+body {
+  transition: all 0s ease;
+}
+.toggle-container {
+  position: fixed;
+  right: 5rem;
+}
+.fixed-container {
+  position: fixed;
+  top: 6rem;
+  right: 7rem;
+}
+.pointer {
+  cursor: pointer;
+}
+.white {
+  background-color: white;
+  width: 50px;
+  height: 30px;
+  border-radius: 15px;
+}
+.black {
+  background-color: #242424;
+  width: 50px;
+  height: 30px;
+  border-radius: 15px;
+}
+.ball {
+  position: absolute;
+  top: 0px;
+  background-color: gray;
+  width: 30px;
+  height: 30px;
+  border: black solid 1px;
+  border-radius: 15px;
+  transition: all 0s ease;
+}
+.moved-ball {
+  translate: 20px;
+}
+.hidden {
+  display: hidden;
 }

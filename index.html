@@ -18,7 +18,23 @@
     <title>VS Material calculator</title>
   </head>
 
-  <body>
+  <body class="">
+    <div class="toggle-container" role="toggle-dark-mode">
+      <h4 class="center">Dark Mode</h4>
+      <div class="fixed-container">
+        <input
+          class="hidden"
+          type="checkbox"
+          name="toggle-dark"
+          id="dark-mode"
+        />
+        <label class="pointer" for="dark-mode"
+          ><div class="white hidden"></div>
+          <div class="ball"></div>
+          <div class="black"></div
+        ></label>
+      </div>
+    </div>
     <h1 class="text-center under-line">Violent Sun Material calculator</h1>
     <br />
     <div class="total-calc">
@@ -40,10 +56,16 @@
               <tr>
                 <td class="bold">Enter Amount to craft</td>
                 <td><input type="number" id="StWepValue" placeholder="0" /></td>
-                <td><input type="number" id="StGearValue" placeholder="0" /></td>
+                <td>
+                  <input type="number" id="StGearValue" placeholder="0" />
+                </td>
                 <td><input type="number" id="ExWepValue" placeholder="0" /></td>
-                <td><input type="number" id="ExGearValue" placeholder="0" /></td>
-                <td><input type="number" id="HRItemValue" placeholder="0" /></td>
+                <td>
+                  <input type="number" id="ExGearValue" placeholder="0" />
+                </td>
+                <td>
+                  <input type="number" id="HRItemValue" placeholder="0" />
+                </td>
                 <td><input type="number" id="AccValue" placeholder="0" /></td>
               </tr>
             </tbody>
