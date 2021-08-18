@@ -77,11 +77,17 @@ function darkMode(e) {
   document.querySelector(".black").classList.toggle("hidden");
   document.querySelector(".ball").classList.toggle("moved-ball");
   const darkMode = document.body.classList.contains("dark-mode");
+  let modeText = document.querySelector(".toggle-container h4");
   try {
     window.localStorage.setItem("darkMode", darkMode);
   } catch (error) {
     console.log("Couldn't persist dark mode state through local storage");
     console.log("Error: ", error);
+  }
+  if (modeText.textContent == "Light Mode") {
+    modeText.textContent = "Dark Mode";
+  } else {
+    modeText.textContent = "Light Mode";
   }
 }
 /**************************************
@@ -97,11 +103,13 @@ function darkMode(e) {
       document.querySelector(".white").classList.remove("hidden");
       document.querySelector(".black").classList.add("hidden");
       document.querySelector(".ball").classList.add("moved-ball");
+      document.querySelector(".toggle-container h4").textContent = "Light Mode";
     } else {
       document.body.classList.remove("dark-mode");
       document.querySelector(".white").classList.add("hidden");
       document.querySelector(".black").classList.remove("hidden");
       document.querySelector(".ball").classList.remove("moved-ball");
+      document.querySelector(".toggle-container h4").textContent = "Dark Mode";
     }
     setTimeout(() => {
       document.body.style = "";

@@ -168,12 +168,12 @@ body {
   background-color: gray;
   width: 30px;
   height: 30px;
-  border: black solid 1px;
+  border: rgb(0, 0, 0) solid 1px;
   border-radius: 15px;
   transition: all 1s ease;
 }
 .moved-ball {
-  translate: 20px;
+  transform: translateX(20px);
 }
 .hidden {
   display: hidden;
