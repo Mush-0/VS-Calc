@@ -136,7 +136,7 @@ input {
 
 /* checkbox rules */
 body {
-  transition: all 0s ease;
+  transition: all 1s ease;
 }
 .toggle-container {
   position: fixed;
@@ -170,7 +170,7 @@ body {
   height: 30px;
   border: black solid 1px;
   border-radius: 15px;
-  transition: all 0s ease;
+  transition: all 1s ease;
 }
 .moved-ball {
   translate: 20px;

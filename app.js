@@ -104,8 +104,8 @@ function darkMode(e) {
       document.querySelector(".ball").classList.remove("moved-ball");
     }
     setTimeout(() => {
-      document.body.style.transitionDuration = "1s";
-      document.querySelector(".ball").style.transitionDuration = "1s";  
+      document.body.style = "";
+      document.querySelector(".ball").style = "";
     }, 500);
   } catch (error) {
     console.log("Couldn't persist dark mode state through local storage");
